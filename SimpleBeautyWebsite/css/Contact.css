@@ -1,0 +1,13 @@
+﻿h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    color: darksalmon;
+}
+
+/*MAP*/
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map_canvas { height: 100% ;
+              padding: 10px;
+              margin: 10px;
+}
