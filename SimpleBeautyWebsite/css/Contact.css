@@ -4,7 +4,16 @@
     color: darksalmon;
 }
 
+/*My Google Map*/
+
 myGoogleMap {
-    border: 1px none #000000;
-    position: center;
+   
+    border: 1px solid #000000;
+    width:500px; height:300px;
+}
+
+/*My Static Google Map*/
+
+staticMap {
+
 }
