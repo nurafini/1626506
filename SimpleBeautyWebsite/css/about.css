@@ -1,5 +1,5 @@
 ﻿h1 {
-    color: hotpink;
+    color: lightpink;
     text-align: center;
     font-size: 200%;
     font-family: Gadugi;
@@ -7,9 +7,9 @@
 
 p {
     color: cadetblue;
-    padding-left: 500px;
-    padding-right: 500px;
-    text-align: center left;
+    padding-left: 600px;
+    padding-right: 600px;
+    text-align: center justify;
     font-size: 150%;
     font-family: Gadugi;
 }

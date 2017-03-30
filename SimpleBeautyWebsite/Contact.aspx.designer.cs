@@ -10,7 +10,7 @@
 namespace SimpleBeautyWebsite {
     
     
-    public partial class Contact {
+    public partial class Contact1 {
         
         /// <summary>
         /// labelName control.

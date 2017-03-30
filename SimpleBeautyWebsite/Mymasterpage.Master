@@ -16,11 +16,12 @@
     <div>
         <nav>
     <ul>
-        <li><a href="~/Contact.aspx">Contact Us</a></li>
+        <li><a href="Contact.aspx">Contact Us</a></li>
         <li><a href="Admin.aspx">Administrator</a></li>
+        <li><a href="Register.aspx">Register</a></li>
         <li><a href="Product.aspx">Shop</a></li>
         <li><a href="About.aspx">About</a></li>
-        <li><a href="~/Default.aspx">Home</a></li>
+        <li><a href="Default.aspx">Home</a></li>
         
     </ul>
        </nav>
@@ -32,6 +33,7 @@
     <footer>Simple Beauty &#8482; 2017
         <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        <a href="http://achecker.ca/checker?uri=referer">Check WCAG</a>
     </footer>
 </body>
 </html>
