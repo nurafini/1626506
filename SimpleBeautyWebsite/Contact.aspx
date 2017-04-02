@@ -41,11 +41,7 @@
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>
     </p>
     
-  
- 
     <div id="myGoogleMap" style="width:500px; height:300px"></div>
-
-   <%--static map--%>
 
     <img width="600" src="https://maps.googleapis.com/maps/api/staticmap?center=4.8856828,114.9314358&zoom=19&scale=false&size=600x300&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C4.8856828,114.9314358" alt="Static Google Map of Simple Beauty store location"/>
 

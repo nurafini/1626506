@@ -8,7 +8,7 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("myGoogleMap"), mapProp);
 
 
-    //Google Developers, Adding a Google Map with a Marker to Your Website, 14th March 2017
+    //Google Developers. Adding a Google Map with a Marker to Your Website. 14th March 2017
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(4.8856828, 114.9314358),
         map: map
