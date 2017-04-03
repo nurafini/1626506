@@ -4,3 +4,15 @@
     color: darksalmon;
 }
 
+ /*featured product*/
+ul.featuredproduct li {
+    float: left;
+}
+
+h4 {
+    color: palevioletred;
+}
+
+p{
+    color: palevioletred;
+}
