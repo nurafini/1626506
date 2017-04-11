@@ -5,8 +5,8 @@
 }
 
  /*featured product*/
-ul.featuredproduct li {
-    float: left;
+ul.featuredproduct li a {
+    float: right;
 }
 
 h4 {

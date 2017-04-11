@@ -10,8 +10,8 @@
     </asp:ContentPlaceHolder>
 </head>
     <!--Simple Beauty logo-->
-    <img src="images/simplebeautylogoblue.jpg" alt="simple beauty logo" width="200" height="150"></img>
-<body>
+    <img src="images/simplebeautylogoblue.jpg" alt="simple beauty logo" width="200" height="150"/>
+
     <form id="form1" runat="server">
     <div>
         <nav>
@@ -35,5 +35,5 @@
         <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
         <a href="http://achecker.ca/checker?uri=referer">Check WCAG</a>
     </footer>
-</body>
+
 </html>
