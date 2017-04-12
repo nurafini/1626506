@@ -11,31 +11,31 @@
 
     <h2><span class="newStyle2">Contact Us</span></h2>
     <p>
-        <asp:Label ID="labelName" runat="server" AssociatedControlID="textboxName" Text="Name:" Font-Names="Segoe UI" Font-Size="Large" CssClass="lblName"></asp:Label>
+        <asp:Label ID="labelName" runat="server" AssociatedControlID="textboxName" Text="Name:" CssClass="lblName"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxName" runat="server" CausesValidation="True" MaxLength="30" ValidateRequestMode="Enabled" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="labelEmail" runat="server" AssociatedControlID="textboxEmail" Text="Email:" Font-Names="Segoe UI" Font-Size="Large"></asp:Label>
+        <asp:Label ID="labelEmail" runat="server" AssociatedControlID="textboxEmail" Text="Email:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxEmail" runat="server" MaxLength="30" TextMode="Email" ValidateRequestMode="Enabled" ValidationGroup="email" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="labelSubject" runat="server" AssociatedControlID="textboxSubject" Font-Names="Segoe UI" Font-Size="Large" Text="Subject:"></asp:Label>
+        <asp:Label ID="labelSubject" runat="server" AssociatedControlID="textboxSubject" Text="Subject:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxSubject" runat="server" Font-Size="Medium" MaxLength="20"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="labelMessage" runat="server" AssociatedControlID="textboxMsg" Text="Message:" Font-Names="Segoe UI" Font-Size="Large"></asp:Label>
+        <asp:Label ID="labelMessage" runat="server" AssociatedControlID="textboxMsg" Text="Message:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxMsg" runat="server" Height="69px" MaxLength="250" TextMode="MultiLine" Width="251px" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Font-Names="Segoe UI" Font-Size="Large" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Text="Submit" />
     </p>
     <p>
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>

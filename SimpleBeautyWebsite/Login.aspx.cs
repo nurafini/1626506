@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +16,27 @@ namespace SimpleBeautyWebsite
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
+            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var userManager = new UserManager<IdentityUser>(userStore);
+            var user = userManager.Find(txtboxLoginEmail.Text, txtboxLoginpw.Text);
+            if (user != null)
+            {
+               
+            }
+            else
+            {
+                litErrorLogin.Text = "Invalid username or password";
+            }
+        }
+        private void LogUserIn(UserManager<IdentityUser> usermanager, IdentityUser user)
+        {
+            var authenthicationManager = HttpContext.Current.GetOwinContext().Authentication;
+            var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+            authenthicationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+        }
+        }
     }
-}
