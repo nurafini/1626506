@@ -25,7 +25,8 @@ namespace SimpleBeautyWebsite
             var user = userManager.Find(txtboxLoginEmail.Text, txtboxLoginpw.Text);
             if (user != null)
             {
-               
+                LogUserIn(userManager, user);
+                Server.Transfer("PrivatePage.aspx", true);
             }
             else
             {

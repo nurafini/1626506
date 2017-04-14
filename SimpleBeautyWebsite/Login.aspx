@@ -3,11 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-    <asp:Label ID="lblLoginEmail" runat="server" Text="Email:" AssociatedControlID="txtboxLoginEmail" Font-Size="Large"></asp:Label>
+    <asp:Label ID="lblLoginUsername" runat="server" Text="Username:" AssociatedControlID="txtboxLoginUsername" Font-Size="Large"></asp:Label>
 </p>
     <p>
 
-        <asp:TextBox ID="txtboxLoginEmail" runat="server" Font-Size="Large" MaxLength="40" ValidateRequestMode="Disabled" ValidationGroup="Email"></asp:TextBox>
+        <asp:TextBox ID="txtboxLoginUsername" runat="server" Font-Size="Large" MaxLength="20"></asp:TextBox>
 
     </p>
     <p>
@@ -17,7 +17,7 @@
     </p>
     <p>
 
-        <asp:TextBox ID="txtboxLoginpw" runat="server" Font-Size="Large" ValidateRequestMode="Enabled" ValidationGroup="Password"></asp:TextBox>
+        <asp:TextBox ID="txtboxLoginpw" runat="server" Font-Size="Large" ValidateRequestMode="Enabled" ValidationGroup="Password" TextMode="Password"></asp:TextBox>
 
     </p>
     <p>

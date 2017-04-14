@@ -13,22 +13,22 @@ namespace SimpleBeautyWebsite {
     public partial class Login {
         
         /// <summary>
-        /// lblLoginEmail control.
+        /// lblLoginUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLoginEmail;
+        protected global::System.Web.UI.WebControls.Label lblLoginUsername;
         
         /// <summary>
-        /// txtboxLoginEmail control.
+        /// txtboxLoginUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtboxLoginEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtboxLoginUsername;
         
         /// <summary>
         /// lblLoginPw control.

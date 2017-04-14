@@ -16,7 +16,7 @@
     <asp:Label ID="lblPassword" runat="server" AssociatedControlID="txtboxPassword" Text="Password:" Font-Size="Large"></asp:Label>
     </p>
     <p>
-    <asp:TextBox ID="txtboxPassword" runat="server" Font-Size="Large" MaxLength="25" ValidateRequestMode="Enabled" ValidationGroup="Password"></asp:TextBox>
+    <asp:TextBox ID="txtboxPassword" runat="server" Font-Size="Large" MaxLength="25" ValidateRequestMode="Enabled" ValidationGroup="Password" TextMode="Password"></asp:TextBox>
     </p>
     <p>
     <asp:Button ID="btnSignup" runat="server" Text="Sign Up" Font-Size="Large" OnClick="btnSignup_Click" />
