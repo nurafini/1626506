@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="PhoneDirectory.aspx" />
     <Content Include="PrivatePage.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Register.aspx" />
@@ -207,6 +208,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneDirectory.aspx.cs">
+      <DependentUpon>PhoneDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhoneDirectory.aspx.designer.cs">
+      <DependentUpon>PhoneDirectory.aspx</DependentUpon>
     </Compile>
     <Compile Include="PrivatePage.aspx.cs">
       <DependentUpon>PrivatePage.aspx</DependentUpon>

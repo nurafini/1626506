@@ -22,7 +22,7 @@ namespace SimpleBeautyWebsite
             var identityDbContext = new IdentityDbContext("IdentityConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var userManager = new UserManager<IdentityUser>(userStore);
-            var user = userManager.Find(txtboxLoginEmail.Text, txtboxLoginpw.Text);
+            var user = userManager.Find(txtboxLoginUsername.Text, txtboxLoginpw.Text);
             if (user != null)
             {
                 LogUserIn(userManager, user);
