@@ -35,7 +35,7 @@
         <asp:TextBox ID="textboxMsg" runat="server" Height="69px" MaxLength="250" TextMode="MultiLine" Width="251px" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Text="Submit" OnClick="btnSubmit_Click" />
     </p>
     <p>
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>
