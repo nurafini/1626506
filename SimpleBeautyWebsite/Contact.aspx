@@ -21,6 +21,7 @@
     </p>
     <p>
         <asp:TextBox ID="textboxEmail" runat="server" MaxLength="30" TextMode="Email" ValidateRequestMode="Enabled" ValidationGroup="email" Font-Size="Medium"></asp:TextBox>
+    &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="textboxEmail" ErrorMessage="Please enter a valid email format." ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
     </p>
     <p>
         <asp:Label ID="labelSubject" runat="server" AssociatedControlID="textboxSubject" Text="Subject:"></asp:Label>
@@ -35,7 +36,7 @@
         <asp:TextBox ID="textboxMsg" runat="server" Height="69px" MaxLength="250" TextMode="MultiLine" Width="251px" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Font-Names="Segoe UI" Font-Size="Large" Text="Submit" />
+        <asp:Button ID="Button1" runat="server" OnCommand="Button1_Command1" Text="Submit" />
     </p>
     <p>
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>
