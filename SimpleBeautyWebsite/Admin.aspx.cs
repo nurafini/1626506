@@ -9,13 +9,9 @@ namespace SimpleBeautyWebsite
 {
     public partial class Admin : System.Web.UI.Page
     {
-        public object SelectBooksGridView { get; private set; }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-      
-
     }
 }

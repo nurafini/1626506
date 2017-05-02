@@ -2,112 +2,131 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSourceBooks" DefaultMode="Insert" Height="207px" Width="1209px">
+    
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="207px" Width="1209px">
         <EditItemTemplate>
-            Id:
-            <asp:Label ID="IdLabel1" runat="server" Text='<%# Eval("Id") %>' />
+            ID:
+            <asp:TextBox ID="IDTextBox" runat="server" Text='<%# Bind("ID") %>' />
             
-            Title:
-            <asp:TextBox ID="TitleTextBox" runat="server" Text='<%# Bind("Title") %>' />
+            Name:
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
             
-            Author:
-            <asp:TextBox ID="AuthorTextBox" runat="server" Text='<%# Bind("Author") %>' />
+            Brand:
+            <asp:TextBox ID="BrandTextBox" runat="server" Text='<%# Bind("Brand") %>' />
             
-            ISBN:
-            <asp:TextBox ID="ISBNTextBox" runat="server" Text='<%# Bind("ISBN") %>' />
-            
-            Publisher:
-            <asp:TextBox ID="PublisherTextBox" runat="server" Text='<%# Bind("Publisher") %>' />
+            Type:
+            <asp:TextBox ID="TypeTextBox" runat="server" Text='<%# Bind("Type") %>' />
             
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+
+            Stock:
+            <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
             
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
-            Title:
-            <asp:TextBox ID="TitleTextBox" runat="server" Text='<%# Bind("Title") %>' />
+           ID:
+            <asp:TextBox ID="IDTextBox" runat="server" Text='<%# Bind("ID") %>' />
             
-            Author:
-            <asp:TextBox ID="AuthorTextBox" runat="server" Text='<%# Bind("Author") %>' />
-           
-            ISBN:
-            <asp:TextBox ID="ISBNTextBox" runat="server" Text='<%# Bind("ISBN") %>' />
+            Name:
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
             
-            Publisher:
-            <asp:TextBox ID="PublisherTextBox" runat="server" Text='<%# Bind("Publisher") %>' />
+            Brand:
+            <asp:TextBox ID="BrandTextBox" runat="server" Text='<%# Bind("Brand") %>' />
+            
+            Type:
+            <asp:TextBox ID="TypeTextBox" runat="server" Text='<%# Bind("Type") %>' />
             
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+
+            Stock:
+            <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
             
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
 
             <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
-            Id:
-            <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
+            ID:
+            <asp:TextBox ID="IDTextBox" runat="server" Text='<%# Bind("ID") %>' />
             
-            Title:
-            <asp:Label ID="TitleLabel" runat="server" Text='<%# Bind("Title") %>' />
+            Name:
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
             
-            Author:
-            <asp:Label ID="AuthorLabel" runat="server" Text='<%# Bind("Author") %>' />
+            Brand:
+            <asp:TextBox ID="BrandTextBox" runat="server" Text='<%# Bind("Brand") %>' />
             
-            ISBN:
-            <asp:Label ID="ISBNLabel" runat="server" Text='<%# Bind("ISBN") %>' />
-            
-            Publisher:
-            <asp:Label ID="PublisherLabel" runat="server" Text='<%# Bind("Publisher") %>' />
+            Type:
+            <asp:TextBox ID="TypeTextBox" runat="server" Text='<%# Bind("Type") %>' />
             
             Description:
-            <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
+            <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
+            
+            Price:
+            <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+
+            Stock:
+            <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
             
 
         </ItemTemplate>
     </asp:FormView>
-    <asp:SqlDataSource ID="SqlDataSourceBooks" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:CO5027ConnectionString %>" DeleteCommand="DELETE FROM [Books] WHERE [Id] = @original_Id AND [Title] = @original_Title AND [Author] = @original_Author AND [ISBN] = @original_ISBN AND [Publisher] = @original_Publisher AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))" InsertCommand="INSERT INTO [Books] ([Title], [Author], [ISBN], [Publisher], [Description]) VALUES (@Title, @Author, @ISBN, @Publisher, @Description)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Books]" UpdateCommand="UPDATE [Books] SET [Title] = @Title, [Author] = @Author, [ISBN] = @ISBN, [Publisher] = @Publisher, [Description] = @Description WHERE [Id] = @original_Id AND [Title] = @original_Title AND [Author] = @original_Author AND [ISBN] = @original_ISBN AND [Publisher] = @original_Publisher AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))">
-        <DeleteParameters>
-            <asp:Parameter Name="original_Id" Type="Int32" />
-            <asp:Parameter Name="original_Title" Type="String" />
-            <asp:Parameter Name="original_Author" Type="String" />
-            <asp:Parameter Name="original_ISBN" Type="String" />
-            <asp:Parameter Name="original_Publisher" Type="String" />
-            <asp:Parameter Name="original_Description" Type="String" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="Title" Type="String" />
-            <asp:Parameter Name="Author" Type="String" />
-            <asp:Parameter Name="ISBN" Type="String" />
-            <asp:Parameter Name="Publisher" Type="String" />
-            <asp:Parameter Name="Description" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="Title" Type="String" />
-            <asp:Parameter Name="Author" Type="String" />
-            <asp:Parameter Name="ISBN" Type="String" />
-            <asp:Parameter Name="Publisher" Type="String" />
-            <asp:Parameter Name="Description" Type="String" />
-            <asp:Parameter Name="original_Id" Type="Int32" />
-            <asp:Parameter Name="original_Title" Type="String" />
-            <asp:Parameter Name="original_Author" Type="String" />
-            <asp:Parameter Name="original_ISBN" Type="String" />
-            <asp:Parameter Name="original_Publisher" Type="String" />
-            <asp:Parameter Name="original_Description" Type="String" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
-    
-    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceBooks">
+
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-            <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-            <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
-            <asp:BoundField DataField="Publisher" HeaderText="Publisher" SortExpression="Publisher" />
+            <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+            <asp:BoundField DataField="Brand" HeaderText="Brand" SortExpression="Brand" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="Product.aspx?Id={0}" Text="View Book" />
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="Stock" HeaderText="Stock" SortExpression="Stock" />
+            <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="Product.aspx?Id={0}" Text="View Products" />
         </Columns>
     </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:CO5027ConnectionString %>" DeleteCommand="DELETE FROM [Products] WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))" InsertCommand="INSERT INTO Products(ID, Name, Brand, Type, Description, Price, Stock) VALUES (@ID, @Name, @Brand, @Type, @Description, @Price, @Stock)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [Name] = @Name, [Brand] = @Brand, [Type] = @Type, [Description] = @Description, [Price] = @Price, [Stock] = @Stock WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))">
+        <DeleteParameters>
+            <asp:Parameter Name="original_ID" Type="Int32" />
+            <asp:Parameter Name="original_Name" Type="String" />
+            <asp:Parameter Name="original_Brand" Type="String" />
+            <asp:Parameter Name="original_Type" Type="String" />
+            <asp:Parameter Name="original_Description" Type="String" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Stock" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="ID" Type="Int32" />
+            <asp:Parameter Name="Name" Type="String" />
+            <asp:Parameter Name="Brand" Type="String" />
+            <asp:Parameter Name="Type" Type="String" />
+            <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="Stock" Type="Int32" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="Name" Type="String" />
+            <asp:Parameter Name="Brand" Type="String" />
+            <asp:Parameter Name="Type" Type="String" />
+            <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="Stock" Type="Int32" />
+            <asp:Parameter Name="original_ID" Type="Int32" />
+            <asp:Parameter Name="original_Name" Type="String" />
+            <asp:Parameter Name="original_Brand" Type="String" />
+            <asp:Parameter Name="original_Type" Type="String" />
+            <asp:Parameter Name="original_Description" Type="String" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Stock" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 </asp:Content>

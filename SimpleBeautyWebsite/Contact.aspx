@@ -15,27 +15,32 @@
     </p>
     <p>
         <asp:TextBox ID="textboxName" runat="server" CausesValidation="True" MaxLength="30" ValidateRequestMode="Enabled" Font-Size="Medium"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="textboxName" ErrorMessage="Please enter name. Field cannot be empty."></asp:RequiredFieldValidator>
     </p>
     <p>
         <asp:Label ID="labelEmail" runat="server" AssociatedControlID="textboxEmail" Text="Email:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxEmail" runat="server" MaxLength="30" TextMode="Email" ValidateRequestMode="Enabled" ValidationGroup="email" Font-Size="Medium"></asp:TextBox>
+    &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="textboxEmail" ErrorMessage="Please enter a valid email format." ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="textboxEmail" ErrorMessage="Email cannot be empty."></asp:RequiredFieldValidator>
     </p>
     <p>
         <asp:Label ID="labelSubject" runat="server" AssociatedControlID="textboxSubject" Text="Subject:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxSubject" runat="server" Font-Size="Medium" MaxLength="20"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="textboxSubject" ErrorMessage="Please enter subject. Field cannot be empty."></asp:RequiredFieldValidator>
     </p>
     <p>
         <asp:Label ID="labelMessage" runat="server" AssociatedControlID="textboxMsg" Text="Message:"></asp:Label>
     </p>
     <p>
         <asp:TextBox ID="textboxMsg" runat="server" Height="69px" MaxLength="250" TextMode="MultiLine" Width="251px" Font-Size="Medium"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="textboxMsg" ErrorMessage="Please enter message. Field cannot be empty."></asp:RequiredFieldValidator>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" BackColor="#FF99FF" Font-Names="Segoe UI" Font-Size="Large" Text="Submit" />
+        <asp:Button ID="Button1" runat="server" OnCommand="Button1_Command1" Text="Submit" />
     </p>
     <p>
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>
