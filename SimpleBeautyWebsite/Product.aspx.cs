@@ -11,7 +11,9 @@ namespace SimpleBeautyWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string productID = Request.QueryString["ID"];
+            string filename = productID + ".jpg";
+            Productimage.ImageUrl = "~/images" + filename;
         }
     }
 }
