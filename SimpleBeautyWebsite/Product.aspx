@@ -80,5 +80,5 @@
 
         </ItemTemplate>
     </asp:FormView>
-    <asp:SqlDataSource ID="ProductsFormView" runat="server" ConnectionString="<%$ ConnectionStrings:CO5027ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="ProductsFormView" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
 </asp:Content>
