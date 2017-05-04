@@ -19,10 +19,10 @@
         <li><a href="Contact.aspx">Contact Us</a></li>
         <li><a href="Admin.aspx">Administrator</a></li>
         <li><a href="Login.aspx">Login</a></li>
-        <li><a href="Register.aspx">New Customer</a></li>
         <li><a href="Product.aspx">Shop</a></li>
         <li><a href="About.aspx">About</a></li>
         <li><a href="Default.aspx">Home</a></li>
+        <li><a href="testing.aspx">testing</a></li>
         
     </ul>
        </nav>
