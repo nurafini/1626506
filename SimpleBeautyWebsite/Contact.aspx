@@ -33,6 +33,16 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="textboxSubject" ErrorMessage="Please enter subject. Field cannot be empty."></asp:RequiredFieldValidator>
     </p>
     <p>
+        <asp:Label ID="lblDropdown" runat="server" Text="Concern:"></asp:Label>
+    </p>
+    <asp:DropDownList ID="dropdownConcern" runat="server" AppendDataBoundItems="true" Width="200px">
+                <asp:ListItem Text="Select Concern" Value="0"></asp:ListItem>
+                <asp:ListItem Text="How do I order from your website?" Value="1"></asp:ListItem>
+                <asp:ListItem Text="How do I pay for my order?" Value="2"></asp:ListItem>
+                <asp:ListItem Text="How long does shipping takes?" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Other matter" Value="4"></asp:ListItem>
+            </asp:DropDownList>
+    <p>
         <asp:Label ID="labelMessage" runat="server" AssociatedControlID="textboxMsg" Text="Message:"></asp:Label>
     </p>
     <p>

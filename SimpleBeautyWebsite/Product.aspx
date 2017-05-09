@@ -2,9 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <asp:Image ID="Productimage" runat="server" />
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="ProductsFormView">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="DisplayProductForm">
         <EditItemTemplate>
             ID:
             <asp:Label ID="IDLabel1" runat="server" Text='<%# Eval("ID") %>' />
@@ -80,5 +78,11 @@
 
         </ItemTemplate>
     </asp:FormView>
-    <asp:SqlDataSource ID="ProductsFormView" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
-</asp:Content>
+    <asp:SqlDataSource ID="DisplayProductForm" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [Products] WHERE ([ID] = @ID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="ID" QueryStringField="ID" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <br />
+    <asp:Image ID="Productimage" runat="server" />
+    </asp:Content>

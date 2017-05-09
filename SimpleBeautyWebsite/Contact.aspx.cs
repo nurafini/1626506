@@ -37,7 +37,7 @@ namespace SimpleBeautyWebsite
 
             msg.Subject = textboxSubject.Text;
             msg.IsBodyHtml = true;
-            msg.Body = string.Format("From: " + textboxName.Text + ",   Email: " + textboxEmail.Text + ",   Message: " + textboxMsg.Text);
+            msg.Body = string.Format("From: " + textboxName.Text + ",   Email: " + textboxEmail.Text + ",   Concern: " + dropdownConcern.SelectedItem.Text + ", Message: " + textboxMsg.Text);
 
             try
             {
@@ -52,6 +52,7 @@ namespace SimpleBeautyWebsite
             textboxEmail.Text = "";
             textboxSubject.Text = "";
             textboxMsg.Text = "";
+            dropdownConcern.Text = "";
         }
     }
     }
