@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace SimpleBeautyWebsite
 {
-    public partial class Product : System.Web.UI.Page
+    public partial class Product1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string productID = Request.QueryString["ID"];
-            string filename = productID + ".jpg";
-            Productimage.ImageUrl = "~/images" + filename;
-            string searchTerm = Request.QueryString["ID"];
+
         }
     }
 }

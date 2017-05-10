@@ -166,6 +166,7 @@
     <Content Include="About.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="css\Product.css" />
     <Content Include="Default.aspx" />
     <Content Include="javascript\map.js" />
     <Content Include="Login.aspx" />
@@ -176,6 +177,7 @@
     </Content>
     <Content Include="Mymasterpage.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Product.aspx" />
     <Content Include="ProductImage.aspx" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -192,7 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Product.aspx" />
+    <Content Include="ProductPage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -250,6 +252,13 @@
     <Compile Include="Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductPage.aspx.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductPage.aspx.designer.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductImage.aspx.cs">
       <DependentUpon>ProductImage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,7 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

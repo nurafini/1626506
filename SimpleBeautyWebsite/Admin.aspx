@@ -91,7 +91,7 @@
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:BoundField DataField="Stock" HeaderText="Stock" SortExpression="Stock" />
-            <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="Product.aspx?Id={0}" Text="View" HeaderText="Product Page" />
+            <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductPage.aspx?Id={0}" Text="View" HeaderText="Product Page" />
             <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductImage.aspx?ID={0}" HeaderText="Image" Text="Upload" />
         </Columns>
     </asp:GridView>
