@@ -11,5 +11,14 @@ namespace SimpleBeautyWebsite {
     
     
     public partial class Product1 {
+        
+        /// <summary>
+        /// banner2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image banner2;
     }
 }
