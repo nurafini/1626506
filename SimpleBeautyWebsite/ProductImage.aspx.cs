@@ -18,11 +18,11 @@ namespace SimpleBeautyWebsite
 
         protected void BtnUploadImg_Click(object sender, EventArgs e)
         {
+       
             //(Andrew Muncey, 2013)
             string productID = Request.QueryString["ID"];
             string filename = productID + ".jpg";
             string saveLocation = Server.MapPath("~/images" + filename);
-
             FileUploadImg.SaveAs(saveLocation);
         }
     }

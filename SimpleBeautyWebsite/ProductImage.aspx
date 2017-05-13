@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    <p>Upload product photo with dimensions below 1000 x 1000 only.</p>
         <asp:FileUpload ID="FileUploadImg" runat="server" />
         <br />
         <asp:Button ID="BtnUploadImg" runat="server" OnClick="BtnUploadImg_Click" Text="Upload" />

@@ -18,6 +18,7 @@ namespace SimpleBeautyWebsite
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            //(Andrew Muncey, 2015)
             var identityDbContext = new IdentityDbContext("db_1626506_co5027_asgConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var userManager = new UserManager<IdentityUser>(userStore);
@@ -55,7 +56,6 @@ namespace SimpleBeautyWebsite
                 IdentityRole endUserRole = new IdentityRole("endUser");
                 roleManager.Create(endUserRole);
                 Server.Transfer("LoginSuccess.aspx", true);
-
             }
             else
             {

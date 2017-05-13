@@ -26,8 +26,6 @@
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
             
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-            <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
            ID:
@@ -83,7 +81,15 @@
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" Width="739px">
         <Columns>
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
+            <asp:TemplateField ShowHeader="False">
+                <EditItemTemplate>
+                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" OnClientClick="return confirm('Changes to record is saved successfully')"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="CancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
             <asp:BoundField DataField="Brand" HeaderText="Brand" SortExpression="Brand" />
@@ -93,6 +99,11 @@
             <asp:BoundField DataField="Stock" HeaderText="Stock" SortExpression="Stock" />
             <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductPage.aspx?Id={0}" Text="View" HeaderText="Product Page" />
             <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductImage.aspx?ID={0}" HeaderText="Image" Text="Upload" />
+            <asp:TemplateField ShowHeader="False" HeaderText="Delete Product">
+                <ItemTemplate>
+                    <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure to delete this record?')"></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" DeleteCommand="DELETE FROM [Products] WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))" InsertCommand="INSERT INTO [Products] ([ID], [Name], [Brand], [Type], [Description], [Price], [Stock]) VALUES (@ID, @Name, @Brand, @Type, @Description, @Price, @Stock)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [Name] = @Name, [Brand] = @Brand, [Type] = @Type, [Description] = @Description, [Price] = @Price, [Stock] = @Stock WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))">

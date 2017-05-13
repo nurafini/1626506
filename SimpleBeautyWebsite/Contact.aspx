@@ -58,7 +58,7 @@
     
     <div id="myGoogleMap" style="width:500px; height:300px"></div>
 
-   <img src="https://maps.googleapis.com/maps/api/staticmap?center=4.8856828,114.9314358&zoom=16&scale=false&size=600x300&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C4.8856828,114.9314358" alt="Google Map of Simple Beauty shop location" width="600" height="300"/>
+   <img src="https://maps.googleapis.com/maps/api/staticmap?center=4.8856828,114.9314358&zoom=16&scale=false&size=600x300&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C4.8856828,114.9314358" alt="Google Map of Simple Beauty shop location. Address: Roof Top, Plaza Abdul Razak, Jalan Laksamana Abdul Razak, Bandar Seri Begawan" width="600" height="300"/>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARAFlBpOcUBOoBY9S4LX9M1GdFzPyMGKQ&callback=myMap"></script>
   
