@@ -9,7 +9,7 @@
     <script src="javascript/map.js"></script>
      
 
-    <h2><span class="newStyle2">Contact Us</span></h2>
+    <h2>Contact Us</h2>
     <p>
         <asp:Label ID="labelName" runat="server" AssociatedControlID="textboxName" Text="Name:" CssClass="lblName"></asp:Label>
     </p>

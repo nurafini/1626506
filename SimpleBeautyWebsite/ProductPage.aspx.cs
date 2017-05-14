@@ -12,7 +12,6 @@ namespace SimpleBeautyWebsite
         protected void Page_Load(object sender, EventArgs e)
         {
             string productID = Request.QueryString["ID"];
-            string productName = Request.QueryString["Name"];
             string filename = productID + ".jpg";
             Productimage.ImageUrl = "~/images" + filename;
             Productimage.AlternateText = filename;

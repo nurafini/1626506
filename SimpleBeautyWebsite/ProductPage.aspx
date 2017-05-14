@@ -7,78 +7,99 @@
     <asp:Image ID="Productimage" runat="server" />
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="DisplayProductForm">
         <EditItemTemplate>
+            <p>
             ID:
             <asp:Label ID="IDLabel1" runat="server" Text='<%# Eval("ID") %>' />
-            <br />
+            </p>
+            <p>
             Name:
             <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-            <br />
+            </p>
+            <p>
             Brand:
             <asp:TextBox ID="BrandTextBox" runat="server" Text='<%# Bind("Brand") %>' />
-            <br />
+            </p>
+            <p>
             Type:
             <asp:TextBox ID="TypeTextBox" runat="server" Text='<%# Bind("Type") %>' />
-            <br />
+            </p>
+            <p>
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
-            <br />
+            </p>
+            <p>
             Price:
             <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
-            <br />
+            </p>
+            <p>
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
-            <br />
+            </p>
+            
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
+            <p>
             ID:
             <asp:TextBox ID="IDTextBox" runat="server" Text='<%# Bind("ID") %>' />
-            <br />
+            </p>
+            <p>
             Name:
             <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-            <br />
+            </p>
+            <p>
             Brand:
             <asp:TextBox ID="BrandTextBox" runat="server" Text='<%# Bind("Brand") %>' />
-            <br />
+            </p>
+            <p>
             Type:
             <asp:TextBox ID="TypeTextBox" runat="server" Text='<%# Bind("Type") %>' />
-            <br />
+            </p>
+            <p>
             Description:
             <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
-            <br />
+            </p>
+            <p>
             Price:
             <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
-            <br />
+            </p>
+            <p>
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
-            <br />
+            </p>
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
+            <p>
             ID:
             <asp:Label ID="IDLabel" runat="server" Text='<%# Eval("ID") %>' />
-            <br />
+            </p>
+            <p>
             Name:
             <asp:Label ID="NameLabel" runat="server" Text='<%# Bind("Name") %>' />
-            <br />
+            </p>
+            <p>
             Brand:
             <asp:Label ID="BrandLabel" runat="server" Text='<%# Bind("Brand") %>' />
-            <br />
+            </p>
+            <p>
             Type:
             <asp:Label ID="TypeLabel" runat="server" Text='<%# Bind("Type") %>' />
-            <br />
+            </p>
+            <p>
             Description:
             <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Bind("Description") %>' />
-            <br />
+            </p>
+            <p>
             Price:
             <asp:Label ID="PriceLabel" runat="server" Text='<%# Bind("Price") %>' />
-            <br />
+            </p>
+            <p>
             Stock:
             <asp:Label ID="StockLabel" runat="server" Text='<%# Bind("Stock") %>' />
-            <br />
-
+            </p>
         </ItemTemplate>
     </asp:FormView>
     <asp:SqlDataSource ID="DisplayProductForm" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [Products] WHERE ([ID] = @ID)">
@@ -86,5 +107,4 @@
             <asp:QueryStringParameter Name="ID" QueryStringField="ID" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <br />
     </asp:Content>

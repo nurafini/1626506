@@ -52,7 +52,6 @@ namespace SimpleBeautyWebsite
             textboxEmail.Text = "";
             textboxSubject.Text = "";
             textboxMsg.Text = "";
-            dropdownConcern.Text = "";
         }
     }
     }
