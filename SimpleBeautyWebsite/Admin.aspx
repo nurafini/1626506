@@ -25,6 +25,9 @@
 
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
+
+            Img Alt:
+            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("ImgAlt") %>' />
             
         </EditItemTemplate>
         <InsertItemTemplate>
@@ -48,6 +51,9 @@
 
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
+
+            Img Alt:
+            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("ImgAlt") %>' />
             
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
 
@@ -74,6 +80,9 @@
 
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
+
+            Img Alt:
+            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("imgalt") %>' />
             
 
         </ItemTemplate>
@@ -81,7 +90,7 @@
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" Width="739px">
         <Columns>
-            <asp:TemplateField ShowHeader="False">
+            <asp:TemplateField ShowHeader="False" HeaderText="Edit">
                 <EditItemTemplate>
                     <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" OnClientClick="return confirm('Changes to record is saved successfully')"></asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="CancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
@@ -100,13 +109,16 @@
             <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductPage.aspx?Id={0}" Text="View" HeaderText="Product Page" />
             <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ProductImage.aspx?ID={0}" HeaderText="Image" Text="Upload" />
             <asp:TemplateField ShowHeader="False" HeaderText="Delete Product">
+            
+            
                 <ItemTemplate>
                     <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure to delete this record?')"></asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
+
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" DeleteCommand="DELETE FROM [Products] WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))" InsertCommand="INSERT INTO [Products] ([ID], [Name], [Brand], [Type], [Description], [Price], [Stock]) VALUES (@ID, @Name, @Brand, @Type, @Description, @Price, @Stock)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [Name] = @Name, [Brand] = @Brand, [Type] = @Type, [Description] = @Description, [Price] = @Price, [Stock] = @Stock WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL))">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626506_co5027_asgConnectionString %>" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Products] WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL)) AND (([imgalt] = @original_imgalt) OR ([imgalt] IS NULL AND @original_imgalt IS NULL))" InsertCommand="INSERT INTO [Products] ([ID], [Name], [Brand], [Type], [Description], [Price], [Stock], [imgalt]) VALUES (@ID, @Name, @Brand, @Type, @Description, @Price, @Stock, @imgalt)" UpdateCommand="UPDATE [Products] SET [Name] = @Name, [Brand] = @Brand, [Type] = @Type, [Description] = @Description, [Price] = @Price, [Stock] = @Stock, [imgalt] = @imgalt WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Brand] = @original_Brand AND [Type] = @original_Type AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL)) AND [Price] = @original_Price AND (([Stock] = @original_Stock) OR ([Stock] IS NULL AND @original_Stock IS NULL)) AND (([imgalt] = @original_imgalt) OR ([imgalt] IS NULL AND @original_imgalt IS NULL))">
         <DeleteParameters>
             <asp:Parameter Name="original_ID" Type="Int32" />
             <asp:Parameter Name="original_Name" Type="String" />
@@ -115,6 +127,7 @@
             <asp:Parameter Name="original_Description" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
             <asp:Parameter Name="original_Stock" Type="Int32" />
+            <asp:Parameter Name="original_imgalt" Type="String" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="ID" Type="Int32" />
@@ -124,6 +137,7 @@
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="Price" Type="Decimal" />
             <asp:Parameter Name="Stock" Type="Int32" />
+            <asp:Parameter Name="imgalt" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="Name" Type="String" />
@@ -132,6 +146,7 @@
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="Price" Type="Decimal" />
             <asp:Parameter Name="Stock" Type="Int32" />
+            <asp:Parameter Name="imgalt" Type="String" />
             <asp:Parameter Name="original_ID" Type="Int32" />
             <asp:Parameter Name="original_Name" Type="String" />
             <asp:Parameter Name="original_Brand" Type="String" />
@@ -139,6 +154,7 @@
             <asp:Parameter Name="original_Description" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
             <asp:Parameter Name="original_Stock" Type="Int32" />
+            <asp:Parameter Name="original_imgalt" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
 </asp:Content>

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <asp:Image ID="Productimage" runat="server" />
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="DisplayProductForm">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="DisplayProductForm" OnPageIndexChanging="FormView1_PageIndexChanging">
         <EditItemTemplate>
             <p>
             ID:

@@ -23,6 +23,7 @@ namespace SimpleBeautyWebsite
             string productID = Request.QueryString["ID"];
             string filename = productID + ".jpg";
             string saveLocation = Server.MapPath("~/images" + filename);
+            string imgalt = altTextBox.Text;
             FileUploadImg.SaveAs(saveLocation);
         }
     }
