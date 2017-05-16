@@ -26,8 +26,6 @@
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
 
-            Img Alt:
-            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("ImgAlt") %>' />
             
         </EditItemTemplate>
         <InsertItemTemplate>
@@ -52,8 +50,7 @@
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
 
-            Img Alt:
-            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("ImgAlt") %>' />
+
             
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
 
@@ -81,9 +78,6 @@
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
 
-            Img Alt:
-            <asp:TextBox ID="imgaltTextBox" runat="server" Text='<%# Bind("imgalt") %>' />
-            
 
         </ItemTemplate>
     </asp:FormView>
@@ -127,7 +121,7 @@
             <asp:Parameter Name="original_Description" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
             <asp:Parameter Name="original_Stock" Type="Int32" />
-            <asp:Parameter Name="original_imgalt" Type="String" />
+ 
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="ID" Type="Int32" />
@@ -137,7 +131,7 @@
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="Price" Type="Decimal" />
             <asp:Parameter Name="Stock" Type="Int32" />
-            <asp:Parameter Name="imgalt" Type="String" />
+
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="Name" Type="String" />
@@ -146,7 +140,7 @@
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="Price" Type="Decimal" />
             <asp:Parameter Name="Stock" Type="Int32" />
-            <asp:Parameter Name="imgalt" Type="String" />
+
             <asp:Parameter Name="original_ID" Type="Int32" />
             <asp:Parameter Name="original_Name" Type="String" />
             <asp:Parameter Name="original_Brand" Type="String" />
@@ -154,7 +148,7 @@
             <asp:Parameter Name="original_Description" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
             <asp:Parameter Name="original_Stock" Type="Int32" />
-            <asp:Parameter Name="original_imgalt" Type="String" />
+
         </UpdateParameters>
     </asp:SqlDataSource>
 </asp:Content>

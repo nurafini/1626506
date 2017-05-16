@@ -10,17 +10,15 @@
     <form id="form1" runat="server">
     <div>
     <p>Upload product photo with dimensions below 1000 x 1000 only.</p>
+        <p>
         <asp:FileUpload ID="FileUploadImg" runat="server" />
-        <br />
-        <asp:Label ID="labelAltimg" runat="server" Text="Image Alternate Text:"></asp:Label>
-        <br />
-        <asp:TextBox ID="altTextBox" runat="server"></asp:TextBox>
-        <br />
+        </p>
+        <p>
         <asp:Button ID="BtnUploadImg" runat="server" OnClick="BtnUploadImg_Click" Text="Upload" />
-        <br />
-        <br />
+        </p>
+        <p>
         <asp:Image ID="Uploadedimage" runat="server" />
-    
+    </p>
     </div>
     </form>
 </body>

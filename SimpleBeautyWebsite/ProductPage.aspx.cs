@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PayPal.Api;
 
 namespace SimpleBeautyWebsite
 {
@@ -31,14 +32,14 @@ namespace SimpleBeautyWebsite
                     Productimage.AlternateText = altName;
                 }
             }
-            
-            
-    catch (Exception a)
+
+
+            catch (Exception a)
             {
                 Response.Write(a.Message);
             }
 
-            
+
             string searchTerm = Request.QueryString["ID"];
         }
 
@@ -47,5 +48,6 @@ namespace SimpleBeautyWebsite
 
         }
 
+       
     }
 }

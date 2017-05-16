@@ -31,24 +31,6 @@ namespace SimpleBeautyWebsite {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadImg;
         
         /// <summary>
-        /// labelAltimg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelAltimg;
-        
-        /// <summary>
-        /// altTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox altTextBox;
-        
-        /// <summary>
         /// BtnUploadImg control.
         /// </summary>
         /// <remarks>
