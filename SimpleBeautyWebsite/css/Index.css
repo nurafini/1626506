@@ -1,7 +1,5 @@
 ﻿/*CSS for MENU*/ 
-
 /*W3Schools 1999-2017*/      
-
  ul {
     list-style-type: none;
     margin: 0;
@@ -9,11 +7,9 @@
     overflow: hidden;
     background-color: pink;
     }
-
     li {
     float: right;
     }
-
     li a {
     display: inline-block;
     color: darkmagenta;
@@ -22,15 +18,10 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
     li a:hover {
     background-color: white;
     }
-
-   
-
 /*CSS for FOOTER*/
-
 footer{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;

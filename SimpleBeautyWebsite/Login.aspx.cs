@@ -7,7 +7,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 namespace SimpleBeautyWebsite
 {
     public partial class Login : System.Web.UI.Page
@@ -41,14 +40,11 @@ namespace SimpleBeautyWebsite
         }
         protected void btnSignup_Click(object sender, EventArgs e)
         {
-
             var identityDbContext = new IdentityDbContext("db_1626506_co5027_asgConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var manager = new UserManager<IdentityUser>(userStore);
-
             var roleStore = new RoleStore<IdentityRole>(identityDbContext);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
-
             var user = new IdentityUser() { UserName = txtboxName.Text, Email = txtboxEmail.Text };
             IdentityResult result = manager.Create(user, txtboxPassword.Text);
             if (result.Succeeded)
@@ -60,7 +56,7 @@ namespace SimpleBeautyWebsite
             else
             {
                 litSignup.Text = "Fail to sign up. Please fill in the form again. " + result.Errors.FirstOrDefault();
-            }
+            }//Andrew Muncey, 2015. Retrieve from Identity:http://tutorials.tinyappco.com/ASPNET/Identity
         }
     }
 }

@@ -4,9 +4,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
-
 [assembly: OwinStartup(typeof(SimpleBeautyWebsite.Startup1))]
-
 namespace SimpleBeautyWebsite
 {
     public class Startup1

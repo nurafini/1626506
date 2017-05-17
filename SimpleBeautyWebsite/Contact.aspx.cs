@@ -5,19 +5,13 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-
-
 namespace SimpleBeautyWebsite
 {
     public partial class Contact1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-
-
         protected void Button1_Command1(object sender, CommandEventArgs e)
         {
             SmtpClient client = new SmtpClient();
@@ -25,20 +19,16 @@ namespace SimpleBeautyWebsite
             client.EnableSsl = true;
             client.Host = "smtp.gmail.com";
             client.Port = 587;
-
             // Smtp authentication
             System.Net.NetworkCredential userpass = new System.Net.NetworkCredential("heysimplebeauty@gmail.com", "simplebeauty");
             client.UseDefaultCredentials = false;
             client.Credentials = userpass;
-
             MailMessage msg = new MailMessage();
             msg.From = new MailAddress(textboxEmail.Text);
             msg.To.Add(new MailAddress("heysimplebeauty@gmail.com"));
-
             msg.Subject = textboxSubject.Text;
             msg.IsBodyHtml = true;
             msg.Body = string.Format("From: " + textboxName.Text + ",   Email: " + textboxEmail.Text + ",   Concern: " + dropdownConcern.SelectedItem.Text + ", Message: " + textboxMsg.Text);
-
             try
             {
                 client.Send(msg);

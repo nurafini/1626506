@@ -6,32 +6,26 @@
     <asp:Label ID="lblLoginUsername" runat="server" Text="Username:" AssociatedControlID="txtboxLoginUsername"></asp:Label>
 </p>
     <p>
-
         <asp:TextBox ID="txtboxLoginUsername" runat="server" Font-Size="Large" MaxLength="20"></asp:TextBox>
 
     </p>
     <p>
-
         <asp:Label ID="lblLoginPw" runat="server" AssociatedControlID="txtboxLoginpw" Text="Password:"></asp:Label>
 
     </p>
     <p>
-
         <asp:TextBox ID="txtboxLoginpw" runat="server" Font-Size="Large" ValidateRequestMode="Enabled" ValidationGroup="Password" TextMode="Password"></asp:TextBox>
 
     </p>
     <p>
-
         <asp:Button ID="btnLogin" runat="server" Font-Size="Large" OnClick="btnLogin_Click" Text="Login" />
 
     </p>
      <p>
-
         <asp:Literal ID="litErrorLogin" runat="server"></asp:Literal>
 
     </p>
      <p>
-
          New to Simple Beauty? Sign up as our new customer!</p>
      <p>
          <asp:Label ID="lblName" runat="server" AssociatedControlID="txtboxName" Text="Name:"></asp:Label>

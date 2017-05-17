@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mymasterpage.Master.cs" Inherits="SimpleBeautyWebsite.SimpleBeautyMasterpage" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="css/Index.css"/>
@@ -11,7 +9,6 @@
 </head>
     <!--Simple Beauty logo-->
     <img src="images/simplebeautylogoblue.jpg" alt="simple beauty logo" width="200" height="150"/>
-
     <form id="form1" runat="server">
     <div>
         <nav>
@@ -24,7 +21,6 @@
     </ul>
        </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
         </asp:ContentPlaceHolder>
     </div>
     </form>
@@ -34,5 +30,4 @@
         <a href="http://achecker.ca/checker?uri=referer">Check WCAG</a>
         <a href="Admin.aspx">Admin Page</a>
     </footer>
-
 </html>

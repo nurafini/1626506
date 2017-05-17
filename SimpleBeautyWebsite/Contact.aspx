@@ -1,14 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mymasterpage.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SimpleBeautyWebsite.Contact1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
-    
     <link rel="stylesheet" href="css/Contact.css" type="text/css" />
     <script src="javascript/map.js"></script>
-     
-
     <h2>Contact Us</h2>
     <p>
         <asp:Label ID="labelName" runat="server" AssociatedControlID="textboxName" Text="Name:" CssClass="lblName"></asp:Label>
@@ -55,11 +50,7 @@
     <p>
         <asp:Literal ID="litMessage" runat="server"></asp:Literal>
     </p>
-    
     <div id="myGoogleMap" style="width:500px; height:300px"></div>
-
    <img src="https://maps.googleapis.com/maps/api/staticmap?center=4.8856828,114.9314358&zoom=16&scale=false&size=600x300&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C4.8856828,114.9314358" alt="Google Map of Simple Beauty shop location. Address: Roof Top, Plaza Abdul Razak, Jalan Laksamana Abdul Razak, Bandar Seri Begawan" width="600" height="300"/>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARAFlBpOcUBOoBY9S4LX9M1GdFzPyMGKQ&callback=myMap"></script>
-  
 </asp:Content>

@@ -174,6 +174,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="css\Product.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ImageUpload.aspx" />
     <Content Include="javascript\map.js" />
     <Content Include="Login.aspx" />
     <Content Include="LoginSuccess.aspx" />
@@ -184,7 +185,6 @@
     <Content Include="Mymasterpage.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Product.aspx" />
-    <Content Include="ProductImage.aspx" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -237,6 +237,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ImageUpload.aspx.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageUpload.aspx.designer.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,13 +271,6 @@
     </Compile>
     <Compile Include="ProductPage.aspx.designer.cs">
       <DependentUpon>ProductPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductImage.aspx.cs">
-      <DependentUpon>ProductImage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductImage.aspx.designer.cs">
-      <DependentUpon>ProductImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mymasterpage.Master.cs">

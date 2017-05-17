@@ -7,14 +7,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PayPal.Api;
-
 namespace SimpleBeautyWebsite
 {
     public partial class Product : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             string productID = Request.QueryString["ID"];
             string filename = productID + ".jpg";
             Productimage.ImageUrl = "~/images" + filename;
@@ -32,22 +30,14 @@ namespace SimpleBeautyWebsite
                     Productimage.AlternateText = altName;
                 }
             }
-
-
             catch (Exception a)
             {
                 Response.Write(a.Message);
             }
-
-
             string searchTerm = Request.QueryString["ID"];
         }
-
         protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
         {
-
-        }
-
-       
+        }   
     }
 }

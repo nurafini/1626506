@@ -1,14 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mymasterpage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SimpleBeautyWebsite.Default1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="css/Default.css" />
-    
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Welcome to Simple Beauty Shop!</h2>
     <asp:Image ID="banner1" runat="server" ImageUrl="images/slider2.jpg" Width="1750px" AlternateText="banner" />
     <h2>Featured Products</h2>
-
     <ul class="featuredproduct">
     <li>
         <a href="ProductPage.aspx?Id=5">
@@ -17,15 +14,13 @@
             <p>A gentle cleanser</p>
             <p>$7</p>
         </a></li>
-
         <li>
         <a href="ProductPage.aspx?Id=4">
             <img src="images/product2.jpg" alt="Su:m37 Fresh Emulsion" width="300" height="300"/>
             <h4>Su:m37 Waterfull Rebalancing Gel Lotion</h4>
             <p>To moisturize skin</p>
             <p>$30</p>
-        </a></li>
-    
+        </a></li>  
         <li>
         <a href="ProductPage.aspx?Id=3">
             <img src="images/product3.jpg" alt="Son and Park Beauty Water" width="300" height="300"/>
@@ -33,7 +28,6 @@
             <p>Creates a clean base for the face</p>
             <p>$20</p>
         </a></li>
-
         <li>
         <a href="ProductPage.aspx?Id=2">
             <img src="images/product4.jpg" alt="Son and Park Beauty Gel" width="300" height="300"/>
@@ -41,7 +35,6 @@
             <p>Light moisturizing gel</p>
             <p>$20</p>
         </a></li>
-
         <li>
         <a href="ProductPage.aspx?Id=1">
             <img src="images/product5.jpg" alt="Benton Snail Bee High Content Steam Cream" width="300" height="300"/>

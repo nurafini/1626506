@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mymasterpage.Master" AutoEventWireup="true" CodeBehind="ProductPage.aspx.cs" Inherits="SimpleBeautyWebsite.Product" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">   
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <asp:Image ID="Productimage" runat="server" />
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID" DataSourceID="DisplayProductForm" OnPageIndexChanging="FormView1_PageIndexChanging">
         <EditItemTemplate>
@@ -34,8 +32,7 @@
             <p>
             Stock:
             <asp:TextBox ID="StockTextBox" runat="server" Text='<%# Bind("Stock") %>' />
-            </p>
-            
+            </p>   
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
@@ -107,5 +104,4 @@
             <asp:QueryStringParameter Name="ID" QueryStringField="ID" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-   
     </asp:Content>
